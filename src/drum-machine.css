@@ -1,0 +1,80 @@
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-container {
+  margin-top: 20px;
+}
+
+.pad-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 5%;
+}
+
+.drum-pad {
+  font-size: 26px;
+  margin-top: 10px;
+  color: #0C99CF;
+  background-color: #F5ADB1;
+  border-radius: 5%;
+  padding: 6% 0;
+}
+
+/*# sourceMappingURL=drum-machine.css.map */

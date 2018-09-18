@@ -1,0 +1,37 @@
+$main-font: Arial, sans-serif;
+$blue: #0C99CF;
+$pink: #F5ADB1;
+
+@for $i from 1 through 12 {
+  .col-#{$i} { width: 100%/12 * $i; }
+}
+
+body {
+  font-family: $main-font;
+}
+div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-container {
+  margin-top: 20px;
+}
+
+.pad-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 5%;
+}
+
+.drum-pad {
+  font-size: 26px;
+  margin-top: 10px;
+  color: $blue;
+  background-color: $pink;
+  border-radius: 5%;
+  padding: 6% 0;
+}
