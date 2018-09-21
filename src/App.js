@@ -32,62 +32,73 @@ class App extends Component {
     constructor(props) {
     super(props);
     this.state = {
-      input: '',
-      messages: []
+      play: false,
+	  loop: false
     }
-    this.handleChange = this.handleChange.bind(this);
-    this.submitMessage = this.submitMessage.bind(this);
+    this.clickPlay = this.clickPlay.bind(this);
+	this.handleKeyPress = this.handleKeyPress.bind(this);
   }
-  handleChange(event) {
+	
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyPress);
+  }
+	
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyPress);
+  }
+	
+  handleKeyPress(e) {
+	if(document.getElementById(e.key.toUpperCase())) {
+    	document.getElementById(e.key.toUpperCase()).play();
+	}
+  }
+  
+  clickPlay(event) {
     this.setState({
-      input: event.target.value
+      play: true
     });
+	event.target.firstChild.play();
+	console.log(event);
   }
-  submitMessage() {
-    const currentMessage = this.state.input;
-    this.setState({
-      input: '',
-      messages: this.state.messages.concat(currentMessage)
-    });
-  }
+	
   render() {
     return (
       <div id="display">
         <h1>Bang the Drum</h1>
         <div className="pad-container col-12">
-          <div id="kick" className="drum-pad">
-						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="Q"></audio>
+	  				<div id="kick" className="drum-pad" onClick={this.clickPlay}>
+						<audio autoPlay={this.state.play} loop={this.state.loop} src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="Q"></audio>
 						Q
 					</div>
-          <div id ="ride" className="drum-pad">
+          <div id ="ride" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="W"></audio>
 						W
 					</div>
-          <div id="snare" className="drum-pad">
+          <div id="snare" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="E"></audio>
 						E
 					</div>
-          <div id="crash" className="drum-pad">
+          <div id="crash" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="A"></audio>
 						A
 					</div>
-          <div id="lowTom" className="drum-pad">
+          <div id="lowTom" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="S"></audio>
 						S
 					</div>
-          <div id="highTom" className="drum-pad">
+          <div id="highTom" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="D"></audio>
 						D
 					</div>
-          <div id="clap" className="drum-pad">
+          <div id="clap" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="Z"></audio>
 						Z
 					</div>
-          <div id="cowBell" className="drum-pad">
+          <div id="cowBell" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="X"></audio>
 						X
 					</div>
-          <div id="triangle" className="drum-pad">
+          <div id="triangle" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="C"></audio>
 						C
 				</div>
@@ -96,6 +107,19 @@ class App extends Component {
     );
   }
 }
+
+/*
+document.onkeypress = function (e) {
+    e = e || window.event;
+	if(document.getElementById(e.key.toUpperCase())) {
+		for (let i = 0; i < document.querySelectorAll(".drum-pad").length; i++) {
+			if(document.querySelectorAll(".drum-pad")[i].innerText === e.key.toUpperCase()) {
+				document.querySelectorAll(".drum-pad")[i].firstChild.play();
+			}
+		}
+	}
+};
+*/
 
 // React-Redux:
 const mapStateToProps = (state) => {
