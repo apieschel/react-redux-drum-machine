@@ -50,6 +50,7 @@ class App extends Component {
   handleKeyPress(e) {
 	if(document.getElementById(e.key.toUpperCase())) {
     	document.getElementById(e.key.toUpperCase()).play();
+		document.getElementById("display").firstChild.innerText = document.getElementById(e.key.toUpperCase()).parentElement.id;
 	}
   }
   
@@ -59,6 +60,7 @@ class App extends Component {
     });
 	event.target.firstChild.play();
 	console.log(event);
+	document.getElementById("display").firstChild.innerText = event.target.id;
   }
 	
   render() {
