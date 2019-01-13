@@ -1,9 +1,11 @@
 dependencies:
+  merge: 1.2.1
   react: 16.7.0
   react-dom: 16.7.0
   react-redux: 6.0.0
   react-scripts: 2.1.3
   redux: 4.0.1
+  webpack-dev-server: 3.1.14
 devDependencies:
   redux-devtools: 3.5.0
 packages:
@@ -1751,9 +1753,9 @@ packages:
       node: '>= 0.12.0'
     resolution:
       integrity: sha512-z55ocwKBRLryBs394Sm3ushTtBeg6VAeuku7utSoSnsJKvKcnXFIyC6vh27n3rXyxSgkJBBCAvyOn7gSUcTYjg==
-  /ajv-errors/1.0.1/ajv@6.6.2:
+  /ajv-errors/1.0.1/ajv@6.7.0:
     dependencies:
-      ajv: 6.6.2
+      ajv: 6.7.0
     dev: false
     id: registry.npmjs.org/ajv-errors/1.0.1
     peerDependencies:
@@ -1769,6 +1771,15 @@ packages:
       ajv: ^6.0.0
     resolution:
       integrity: sha1-6GuBnGAs+IIa1jdBNpjx3sAhhHo=
+  /ajv-keywords/3.2.0/ajv@6.7.0:
+    dependencies:
+      ajv: 6.7.0
+    dev: false
+    id: registry.npmjs.org/ajv-keywords/3.2.0
+    peerDependencies:
+      ajv: ^6.0.0
+    resolution:
+      integrity: sha1-6GuBnGAs+IIa1jdBNpjx3sAhhHo=
   /ajv/6.6.2:
     dependencies:
       fast-deep-equal: 2.0.1
@@ -1778,6 +1789,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-FBHEW6Jf5TB9MGBgUUA9XHkTbjXYfAUjY43ACMfmdMRHniyoMHjHjzD50OK8LGDWQwp4rWEsIq5kEqq7rvIM1g==
+  /ajv/6.7.0:
+    dependencies:
+      fast-deep-equal: 2.0.1
+      fast-json-stable-stringify: 2.0.0
+      json-schema-traverse: 0.4.1
+      uri-js: 4.2.2
+    dev: false
+    resolution:
+      integrity: sha512-RZXPviBTtfmtka9n9sy1N5M5b82CbxWIR6HIis4s3WQTXDJamc/0gpCWNGz6EWdWp4DOfjzJfhz/AS9zVPjjWg==
   /alphanum-sort/1.0.2:
     dev: false
     resolution:
@@ -9230,9 +9250,9 @@ packages:
       integrity: sha512-v/iwU6wvwGK8HbU9yi3/nhGzP0yGSuhQMzL6ySiec1FSrZZDkhm4noOSWzrNFo/jEc+SJY6jRTwuwbSXJPDUnQ==
   /schema-utils/1.0.0:
     dependencies:
-      ajv: 6.6.2
-      ajv-errors: /ajv-errors/1.0.1/ajv@6.6.2
-      ajv-keywords: /ajv-keywords/3.2.0/ajv@6.6.2
+      ajv: 6.7.0
+      ajv-errors: /ajv-errors/1.0.1/ajv@6.7.0
+      ajv-keywords: /ajv-keywords/3.2.0/ajv@6.7.0
     dev: false
     engines:
       node: '>= 4'
@@ -10406,6 +10426,19 @@ packages:
     dev: false
     resolution:
       integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==
+  /webpack-dev-middleware/3.4.0:
+    dependencies:
+      memory-fs: 0.4.1
+      mime: 2.4.0
+      range-parser: 1.2.0
+      webpack-log: 2.0.0
+    dev: false
+    engines:
+      node: '>= 6'
+    peerDependencies:
+      webpack: ^4.0.0
+    resolution:
+      integrity: sha512-Q9Iyc0X9dP9bAsYskAVJ/hmIZZQwf/3Sy4xCAZgL5cUkjZmUZLt4l5HpbST/Pdgjn3u6pE7u5OdGd1apgzRujA==
   /webpack-dev-middleware/3.4.0/webpack@4.19.1:
     dependencies:
       memory-fs: 0.4.1
@@ -10421,6 +10454,46 @@ packages:
       webpack: ^4.0.0
     resolution:
       integrity: sha512-Q9Iyc0X9dP9bAsYskAVJ/hmIZZQwf/3Sy4xCAZgL5cUkjZmUZLt4l5HpbST/Pdgjn3u6pE7u5OdGd1apgzRujA==
+  /webpack-dev-server/3.1.14:
+    dependencies:
+      ansi-html: 0.0.7
+      bonjour: 3.5.0
+      chokidar: 2.0.4
+      compression: 1.7.3
+      connect-history-api-fallback: 1.6.0
+      debug: 3.2.6
+      del: 3.0.0
+      express: 4.16.4
+      html-entities: 1.2.1
+      http-proxy-middleware: 0.18.0
+      import-local: 2.0.0
+      internal-ip: 3.0.1
+      ip: 1.1.5
+      killable: 1.0.1
+      loglevel: 1.6.1
+      opn: 5.4.0
+      portfinder: 1.0.20
+      schema-utils: 1.0.0
+      selfsigned: 1.10.4
+      semver: 5.6.0
+      serve-index: 1.9.1
+      sockjs: 0.3.19
+      sockjs-client: 1.3.0
+      spdy: 4.0.0
+      strip-ansi: 3.0.1
+      supports-color: 5.5.0
+      url: 0.11.0
+      webpack-dev-middleware: 3.4.0
+      webpack-log: 2.0.0
+      yargs: 12.0.2
+    dev: false
+    engines:
+      node: '>= 6.11.5'
+    hasBin: true
+    peerDependencies:
+      webpack: ^4.0.0
+    resolution:
+      integrity: sha512-mGXDgz5SlTxcF3hUpfC8hrQ11yhAttuUQWf1Wmb+6zo3x6rb7b9mIfuQvAPLdfDRCGRGvakBWHdHOa0I9p/EVQ==
   /webpack-dev-server/3.1.14/webpack@4.19.1:
     dependencies:
       ansi-html: 0.0.7
@@ -10843,9 +10916,11 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  merge: ^1.2.1
   react: ^16.7.0
   react-dom: ^16.6.3
   react-redux: ^6.0.0
   react-scripts: ^2.1.3
   redux: ^4.0.1
   redux-devtools: ^3.4.1
+  webpack-dev-server: ^3.1.14
