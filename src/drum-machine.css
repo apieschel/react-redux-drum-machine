@@ -73,7 +73,7 @@ div {
 
 .pad-container {
   display: grid;
-  grid-template-columns: 31% 31% 31%;
+  grid-template-columns: 29.3% 29.3% 29.3%;
   grid-column-gap: 6%;
 }
 
