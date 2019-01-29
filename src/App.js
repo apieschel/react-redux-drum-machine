@@ -66,18 +66,18 @@ class App extends Component {
   render() {
     return (
       <div id="display">
-        <h1>Bang the Drum</h1>
+        <h1>Casio SA-10 Drum Machine</h1>
         <div className="pad-container col-12">
 	  				<div id="kick" className="drum-pad" onClick={this.clickPlay}>
-						<audio autoPlay={this.state.play} loop={this.state.loop} src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="Q"></audio>
+						<audio autoPlay={this.state.play} loop={this.state.loop} src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fkick.wav?1548794293466" className="clip" id="Q"></audio>
 						Q
 					</div>
           <div id ="ride" className="drum-pad" onClick={this.clickPlay}>
-						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="W"></audio>
+						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fride1.wav?1548794293997" className="clip" id="W"></audio>
 						W
 					</div>
           <div id="snare" className="drum-pad" onClick={this.clickPlay}>
-						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="E"></audio>
+						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fsnare1.wav?1548794294391" className="clip" id="E"></audio>
 						E
 					</div>
           <div id="crash" className="drum-pad" onClick={this.clickPlay}>
