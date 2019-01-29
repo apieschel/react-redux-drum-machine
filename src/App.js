@@ -68,7 +68,7 @@ class App extends Component {
       <div id="display">
         <h1>Casio SA-10 Drum Machine</h1>
         <div className="pad-container col-12">
-	  				<div id="kick" className="drum-pad" onClick={this.clickPlay}>
+	  				<div id="KICK" className="drum-pad" onClick={this.clickPlay}>
 						<audio autoPlay={this.state.play} loop={this.state.loop} src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fkick.wav?1548794293466" className="clip" id="Q"></audio>
 						Q
 					</div>
@@ -92,16 +92,16 @@ class App extends Component {
 						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Ftom1.wav?1548794296668" className="clip" id="D"></audio>
 						D
 					</div>
-          <div id="clap" className="drum-pad" onClick={this.clickPlay}>
-						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="Z"></audio>
+          <div id="cowbell" className="drum-pad" onClick={this.clickPlay}>
+						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fcowbell1.wav?1548794296801" className="clip" id="Z"></audio>
 						Z
 					</div>
-          <div id="cowBell" className="drum-pad" onClick={this.clickPlay}>
-						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="X"></audio>
+          <div id="shaker" className="drum-pad" onClick={this.clickPlay}>
+						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fshaker.wav?1548794293831" className="clip" id="X"></audio>
 						X
 					</div>
           <div id="triangle" className="drum-pad" onClick={this.clickPlay}>
-						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="C"></audio>
+						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Ftriangle1.wav?1548794295370" className="clip" id="C"></audio>
 						C
 				</div>
         </div>

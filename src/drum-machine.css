@@ -49,10 +49,11 @@
 body {
   background-color: black;
   font-family: Arial, sans-serif;
+  padding-top: 2%;
 }
 
 h1 {
-  color: white;
+  color: #ED5D25;
 }
 
 div {
@@ -82,8 +83,18 @@ div {
   height: 180px;
   margin-top: 20px;
   background-color: white;
+  border: 5px solid #00BB88;
   border-radius: 5%;
   padding: 6% 0;
+}
+
+@media screen and (max-width:600px) {
+  .pad-container {
+    grid-column-gap: 2%;
+  }
+  .pad-container {
+    grid-template-columns: 28% 28% 28%;
+  }
 }
 
 /*# sourceMappingURL=drum-machine.css.map */
