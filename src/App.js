@@ -72,35 +72,35 @@ class App extends Component {
 						<audio autoPlay={this.state.play} loop={this.state.loop} src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fkick.wav?1548794293466" className="clip" id="Q"></audio>
 						Q
 					</div>
-          <div id ="ride" className="drum-pad" onClick={this.clickPlay}>
+          <div id ="RIDE" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fride1.wav?1548794293997" className="clip" id="W"></audio>
 						W
 					</div>
-          <div id="snare" className="drum-pad" onClick={this.clickPlay}>
+          <div id="SNARE" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fsnare1.wav?1548794294391" className="clip" id="E"></audio>
 						E
 					</div>
-          <div id="conga" className="drum-pad" onClick={this.clickPlay}>
+          <div id="CONGO" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fconga1.wav?1548794296100" className="clip" id="A"></audio>
 						A
 					</div>
-          <div id="lowTom" className="drum-pad" onClick={this.clickPlay}>
+          <div id="LOWTOM" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Ftom2.wav?1548794295629" className="clip" id="S"></audio>
 						S
 					</div>
-          <div id="highTom" className="drum-pad" onClick={this.clickPlay}>
+          <div id="HIGHTOM" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Ftom1.wav?1548794296668" className="clip" id="D"></audio>
 						D
 					</div>
-          <div id="cowbell" className="drum-pad" onClick={this.clickPlay}>
+          <div id="COWBELL" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fcowbell1.wav?1548794296801" className="clip" id="Z"></audio>
 						Z
 					</div>
-          <div id="shaker" className="drum-pad" onClick={this.clickPlay}>
+          <div id="SHAKER" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fshaker.wav?1548794293831" className="clip" id="X"></audio>
 						X
 					</div>
-          <div id="triangle" className="drum-pad" onClick={this.clickPlay}>
+          <div id="TRIANGLE" className="drum-pad" onClick={this.clickPlay}>
 						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Ftriangle1.wav?1548794295370" className="clip" id="C"></audio>
 						C
 				</div>
