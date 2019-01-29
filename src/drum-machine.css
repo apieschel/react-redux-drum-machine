@@ -47,7 +47,12 @@
 }
 
 body {
+  background-color: black;
   font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: white;
 }
 
 div {
@@ -68,15 +73,15 @@ div {
 
 .pad-container {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-column-gap: 5%;
+  grid-template-columns: 31% 31% 31%;
+  grid-column-gap: 6%;
 }
 
 .drum-pad {
   font-size: 26px;
-  margin-top: 10px;
-  color: #0C99CF;
-  background-color: #F5ADB1;
+  height: 180px;
+  margin-top: 20px;
+  background-color: white;
   border-radius: 5%;
   padding: 6% 0;
 }

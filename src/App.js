@@ -80,16 +80,16 @@ class App extends Component {
 						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fsnare1.wav?1548794294391" className="clip" id="E"></audio>
 						E
 					</div>
-          <div id="crash" className="drum-pad" onClick={this.clickPlay}>
-						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="A"></audio>
+          <div id="conga" className="drum-pad" onClick={this.clickPlay}>
+						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fconga1.wav?1548794296100" className="clip" id="A"></audio>
 						A
 					</div>
           <div id="lowTom" className="drum-pad" onClick={this.clickPlay}>
-						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="S"></audio>
+						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Ftom2.wav?1548794295629" className="clip" id="S"></audio>
 						S
 					</div>
           <div id="highTom" className="drum-pad" onClick={this.clickPlay}>
-						<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className="clip" id="D"></audio>
+						<audio src="https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Ftom1.wav?1548794296668" className="clip" id="D"></audio>
 						D
 					</div>
           <div id="clap" className="drum-pad" onClick={this.clickPlay}>
