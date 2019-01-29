@@ -1,1 +1,1 @@
-This is a drum machine modeled after the Casio SA-10 built with React. Samples are from this site: https://bedroomproducersblog.com/2009/05/07/free-sample-pack-2-casio-sa-10-soundfont-drum-samples-and-loops/. 
+This is a drum machine modeled after the Casio SA-10 and built with React. Samples are from this site: https://bedroomproducersblog.com/2009/05/07/free-sample-pack-2-casio-sa-10-soundfont-drum-samples-and-loops/. 
