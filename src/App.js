@@ -41,6 +41,7 @@ class App extends Component {
     }
     this.clickPlay = this.clickPlay.bind(this);
 	  this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.handleBpmChange = this.handleBpmChange.bind(this);
   }
 	
   componentDidMount() {
@@ -58,17 +59,23 @@ class App extends Component {
     }
   }
   
+  handleBpmChange(e) {
+    const bpm = e.target.value;
+    this.setState({ bpm: bpm });
+  }
+  
   clickPlay(event) {
     this.setState({
       play: true
     });
-	event.target.firstChild.play();
-	console.log(event);
-	document.getElementById("display").firstChild.innerText = event.target.id;
+    event.target.firstChild.play();
+    console.log(event);
+    document.getElementById("display").firstChild.innerText = event.target.id;
   }
 	
   render() {
-    const { playing, bpm } = this.state;
+    const playing = this.state.playing;
+    const bpm = this.state.bpm;
     
     return (
       <div id="display">
@@ -119,7 +126,9 @@ class App extends Component {
                 type="range"
                 min="60"
                 max="240"
-                value={bpm} />
+                value={bpm}
+                onChange={this.handleBpmChange}
+                />
             </div>
             <button>
               {playing ? 'Stop' : 'Metronome'}
