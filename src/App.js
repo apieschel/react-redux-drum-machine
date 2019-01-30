@@ -39,12 +39,13 @@ class App extends Component {
       bpm: 100,
       beatsPerMeasure: 4,
     }
-    this.triangleClick = new Audio('https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Ftriangle2.wav?1548794296378');
+    this.triangleClick = new Audio('https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fstick.wav?1548794294318');
     this.cowbellClick = new Audio('https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fcowbell2.wav?1548794293518');
     this.clickPlay = this.clickPlay.bind(this);
 	  this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleBpmChange = this.handleBpmChange.bind(this);
     this.handleStartStop = this.handleStartStop.bind(this);
+    this.playClick = this.playClick.bind(this);
   }
 	
   componentDidMount() {
@@ -72,6 +73,23 @@ class App extends Component {
         // Play a click "immediately" (after setState finishes)
       }, this.playClick);
     }
+  }
+  
+  playClick() {
+    const count = this.state.count; 
+    const beatsPerMeasure = this.state.beatsPerMeasure;
+
+    // The first beat will have a different sound than the others
+    if(count % beatsPerMeasure === 0) {
+      this.triangleClick.play();
+    } else {
+      this.cowbellClick.play();
+    }
+
+    // Keep track of which beat we're on
+    this.setState(state => ({
+      count: (state.count + 1) % state.beatsPerMeasure
+    }));
   }
 	
   handleKeyPress(e) {
