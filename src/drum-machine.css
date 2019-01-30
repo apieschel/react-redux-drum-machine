@@ -88,6 +88,27 @@ div {
   padding: 6% 0;
 }
 
+
+@media screen and (max-width:1400px) {
+  .pad-container {
+    grid-template-columns: 29% 29% 29%;
+    grid-column-gap: 2%;
+  }
+  
+  #display {
+    width:35%;
+  }
+  
+  .drum-pad {
+    box-sizing: border-box;
+    height: 160px;
+  }
+  
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width:600px) {
   .pad-container {
     grid-template-columns: 29% 29% 29%;
