@@ -142,17 +142,41 @@ div {
   }
   
   #display {
-    width:100%;
+    width:95%;
   }
   
   .drum-pad {
     box-sizing: border-box;
-    height: 120px;
+    height: 100px;
   }
   
   h1 {
+    font-size: 20px;
     margin-bottom: 0;
   }
 }
+
+
+@media screen and (max-width:600px) {
+  .pad-container {
+    grid-template-columns: 29% 29% 29%;
+    grid-column-gap: 2%;
+  }
+  
+  #display {
+    width:95%;
+  }
+  
+  .drum-pad {
+    box-sizing: border-box;
+    height: 100px;
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+}
+
 
 /*# sourceMappingURL=drum-machine.css.map */

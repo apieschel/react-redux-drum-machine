@@ -1,3 +1,6 @@
+// Sources 
+// https://www.codeproject.com/Articles/1202580/Build-a-Metronome-in-React
+
 import React, { Component } from 'react';
 import { Provider, connect } from 'react-redux';
 import { createStore } from 'redux';
@@ -55,8 +58,7 @@ class App extends Component {
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyPress);
   }
-  
-  
+    
   handleStartStop(e) {
     if(this.state.playing) {
     // Stop the timer
@@ -101,7 +103,20 @@ class App extends Component {
   
   handleBpmChange(e) {
     const bpm = e.target.value;
-    this.setState({ bpm: bpm });
+    if(this.state.playing) {
+      // Stop the old timer and start a new one
+      clearInterval(this.timer);
+      this.timer = setInterval(this.playClick, (60 / bpm) * 1000);
+
+      // Set the new BPM, and reset the beat counter
+      this.setState({
+        count: 0,
+        bpm: bpm
+      });
+    } else {
+      // Otherwise just update the BPM
+      this.setState({ bpm: bpm });
+    }
   }
   
   clickPlay(event) {
