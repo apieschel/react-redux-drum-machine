@@ -96,7 +96,8 @@ class App extends Component {
 	
   handleKeyPress(e) {
     if(document.getElementById(e.key.toUpperCase())) {
-        document.getElementById(e.key.toUpperCase()).play();
+      document.getElementById(e.key.toUpperCase()).play();
+      //document.getElementById(e.key.toUpperCase()).parentElement.style.background = "green";
       document.getElementById("display").firstChild.innerText = document.getElementById(e.key.toUpperCase()).parentElement.id;
     }
   }
