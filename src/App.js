@@ -33,10 +33,14 @@ class App extends Component {
     super(props);
     this.state = {
       play: false,
-	  loop: false
+	    loop: false,
+      playing: false,
+      count: 0,
+      bpm: 100,
+      beatsPerMeasure: 4
     }
     this.clickPlay = this.clickPlay.bind(this);
-	this.handleKeyPress = this.handleKeyPress.bind(this);
+	  this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 	
   componentDidMount() {
@@ -48,10 +52,10 @@ class App extends Component {
   }
 	
   handleKeyPress(e) {
-	if(document.getElementById(e.key.toUpperCase())) {
-    	document.getElementById(e.key.toUpperCase()).play();
-		document.getElementById("display").firstChild.innerText = document.getElementById(e.key.toUpperCase()).parentElement.id;
-	}
+    if(document.getElementById(e.key.toUpperCase())) {
+        document.getElementById(e.key.toUpperCase()).play();
+      document.getElementById("display").firstChild.innerText = document.getElementById(e.key.toUpperCase()).parentElement.id;
+    }
   }
   
   clickPlay(event) {
@@ -64,6 +68,8 @@ class App extends Component {
   }
 	
   render() {
+    const { playing, bpm } = this.state;
+    
     return (
       <div id="display">
         <h1>Casio SA-10 Drum Machine</h1>
@@ -105,6 +111,21 @@ class App extends Component {
 						C
 				</div>
         </div>
+        
+         <div className="metronome">
+            <div className="bpm-slider">
+            <div class="bpm">{bpm} BPM</div>
+              <input
+                type="range"
+                min="60"
+                max="240"
+                value={bpm} />
+            </div>
+            <button>
+              {playing ? 'Stop' : 'Metronome'}
+            </button>
+         </div>
+        
       </div>
     );
   }

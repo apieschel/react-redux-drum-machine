@@ -88,6 +88,32 @@ div {
   padding: 6% 0;
 }
 
+.metronome {
+  text-align: center;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.bpm-slider input {
+  width: 100%;
+  margin: 10px;
+}
+
+.metronome button {
+  background: #ED5D25;
+  padding: 10px;
+  border: 1px solid #ED5D25;
+  border-radius: 2px;
+  width: 150px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.bpm {
+  color: white;
+}
+
 
 @media screen and (max-width:1400px) {
   .pad-container {
@@ -96,12 +122,12 @@ div {
   }
   
   #display {
-    width:35%;
+    width:25%;
   }
   
   .drum-pad {
     box-sizing: border-box;
-    height: 160px;
+    height: 100px;
   }
   
   h1 {
