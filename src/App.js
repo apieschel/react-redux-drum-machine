@@ -37,11 +37,14 @@ class App extends Component {
       playing: false,
       count: 0,
       bpm: 100,
-      beatsPerMeasure: 4
+      beatsPerMeasure: 4,
     }
+    this.triangleClick = new Audio('https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Ftriangle2.wav?1548794296378');
+    this.cowbellClick = new Audio('https://cdn.glitch.com/24841964-d2fb-4c37-a68b-67ab4e207431%2Fcowbell2.wav?1548794293518');
     this.clickPlay = this.clickPlay.bind(this);
 	  this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleBpmChange = this.handleBpmChange.bind(this);
+    this.handleStartStop = this.handleStartStop.bind(this);
   }
 	
   componentDidMount() {
@@ -50,6 +53,25 @@ class App extends Component {
 	
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyPress);
+  }
+  
+  
+  handleStartStop(e) {
+    if(this.state.playing) {
+    // Stop the timer
+    clearInterval(this.timer);
+    this.setState({
+      playing: false
+    });
+    } else {
+      // Start a timer with the current BPM
+      this.timer = setInterval(this.playClick, (60 / this.state.bpm) * 1000);
+      this.setState({
+        count: 0,
+        playing: true
+        // Play a click "immediately" (after setState finishes)
+      }, this.playClick);
+    }
   }
 	
   handleKeyPress(e) {
@@ -121,7 +143,7 @@ class App extends Component {
         
          <div className="metronome">
             <div className="bpm-slider">
-            <div class="bpm">{bpm} BPM</div>
+            <div className="bpm">{bpm} BPM</div>
               <input
                 type="range"
                 min="60"
@@ -130,7 +152,7 @@ class App extends Component {
                 onChange={this.handleBpmChange}
                 />
             </div>
-            <button>
+            <button onClick={this.handleStartStop}>
               {playing ? 'Stop' : 'Metronome'}
             </button>
          </div>
